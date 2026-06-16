@@ -220,3 +220,5 @@ __marimo__/
 notebooks/mongodb_connection.ipynb
 /artifact
 /venv_predictive_maintenance_ml
+.vercel
+.env*
