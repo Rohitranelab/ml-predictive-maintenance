@@ -1,0 +1,49 @@
+columns:
+  - UDI: int
+  - Product ID: object
+  - Type: object
+  - Air temperature [K]: float
+  - Process temperature [K]: float
+  - Rotational speed [rpm]: int
+  - Torque [Nm]: float
+  - Tool wear [min]: int
+  - Machine failure: int
+  - TWF: int
+  - HDF: int
+  - PWF: int
+  - OSF: int
+  - RNF: int
+
+numerical_columns:
+  - UDI
+  - Air temperature [K]
+  - Process temperature [K]
+  - Rotational speed [rpm]
+  - Torque [Nm]
+  - Tool wear [min]
+  - Machine failure
+  - TWF
+  - HDF
+  - PWF
+  - OSF
+  - RNF
+
+categorical_columns:
+  - Product ID
+  - Type
+
+drop_columns:
+  - UDI
+  - Product ID
+  - TWF
+  - HDF
+  - PWF
+  - OSF
+  - RNF
+
+num_features:
+  - Air temperature [K]
+  - Process temperature [K]
+  - Rotational speed [rpm]
+  - Torque [Nm]
+  - Tool wear [min]
