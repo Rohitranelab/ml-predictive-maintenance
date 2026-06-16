@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Predictive Maintenance</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Predictive Maintenance</h1>
+
+<form method="post">
+
+<label>Air Temperature [K]</label>
+<input type="number" step="0.01" name="Air_temperature" required>
+
+<label>Process Temperature [K]</label>
+<input type="number" step="0.01" name="Process_temperature" required>
+
+<label>Rotational Speed [rpm]</label>
+<input type="number" name="Rotational_speed" required>
+
+<label>Torque [Nm]</label>
+<input type="number" step="0.01" name="Torque" required>
+
+<label>Tool Wear [min]</label>
+<input type="number" name="Tool_Wear" required>
+
+<label>Type Encoder</label>
+<input type="number" min="0" max="2" name="TypeEncoder" required>
+
+<button type="submit">
+Predict
+</button>
+
+</form>
+
+<form action="/train" method="get">
+
+<button class="train-button">
+Train Model
+</button>
+
+</form>
+
+{% if context %}
+
+<h2>
+Prediction : {{ context }}
+</h2>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
