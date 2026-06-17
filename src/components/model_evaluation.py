@@ -35,16 +35,28 @@ class ModelEvaluation:
 
     def get_best_model(self):
         try:
-            model_path = "model_bucket/predictive_maintenance_model.pkl"
-
+            BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    
+            # Move from src/component -> project root
+            PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", ".."))
+    
+            model_path = os.path.join(
+                PROJECT_ROOT,
+                "model_bucket",
+                "predictive_maintenance_model.pkl"
+            )
+    
+            print("Model Path:", model_path)
+            print("Exists:", os.path.exists(model_path))
+    
             if os.path.exists(model_path):
                 model = load_object(file_path=model_path)
                 logging.info(f"Production model loaded from {model_path}")
                 return model
-
+    
             logging.info("No production model found in model_bucket")
             return None
-
+    
         except Exception as e:
             raise MyException(e, sys)
         
