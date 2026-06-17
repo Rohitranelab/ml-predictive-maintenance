@@ -420,6 +420,13 @@ F1 Score
 - Template Rendering
 
 ---
+# 🌐 Live Demo
+
+```bash
+https://predictive-maintenance-neon.vercel.app/
+```
+
+---
 
 # 👨‍💻 Author
 
@@ -432,12 +439,6 @@ Aspiring Machine Learning Engineer | MLOps Enthusiast
 - FastAPI
 - MongoDB
 - Python
-
-📧 Add your Email
-
-🔗 Add your LinkedIn
-
-🔗 Add your GitHub
 
 ---
 
