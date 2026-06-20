@@ -136,7 +136,7 @@ FastAPI Web Application
 ### Output
 
 ```text
-artifact/
+component/
 └── data_ingestion/
 ```
 
@@ -154,7 +154,7 @@ Validates:
 ### Output
 
 ```text
-artifact/
+component/
 └── data_validation/
 ```
 
@@ -171,7 +171,7 @@ Performs:
 ### Output
 
 ```text
-artifact/
+component/
 └── data_transformation/
 ```
 
